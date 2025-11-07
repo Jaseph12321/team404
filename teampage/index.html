@@ -5,327 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>!404 Team Website</title>
     <link rel="icon" type="image/svg+xml" href="./assets/images/Favicon_dark.svg" />
-    <style>
-      /* ---------- VARIABLES ---------- */
-      :root {
-        /* Section vertikal */
-        --section-y: 80px;
-
-        /* Page-Gutter */
-        --page-x: 140px;
-      }
-
-      /* ---------- BASE STYLES ---------- */
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        font-family: "Poppins", sans-serif;
-        line-height: 1.6;
-        color: #333;
-        background: #f5f6fa;
-      }
-
-      section {
-        padding: var(--section-y) 0;
-      }
-
-      .container {
-        padding-left: var(--page-x);
-        padding-right: var(--page-x);
-        align-content: center;
-      }
-      /* ---------- NAVBAR ---------- */
-      nav {
-        position: sticky;
-        width: 100%;
-        top: 0;
-        left: 0;
-        background: #0e0e2a;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0px 40px;
-        z-index: 1000;
-      }
-
-      nav ul {
-        list-style: none;
-        display: flex;
-        gap: 25px;
-      }
-
-      nav ul li a {
-        text-decoration: none;
-        color: white;
-        font-weight: 500;
-        transition: color 0.3s;
-      }
-
-      nav ul li a:hover {
-        color: #34b984;
-      }
-
-      /* ---------- HEADER ---------- */
-      header {
-        background-image: url("./assets/images/Header.png");
-        background-size: cover;
-        background-position: center;
-        height: 500px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding-right: 5%;
-        color: white;
-      }
-
-      .header-content {
-        padding: 40px;
-        width: 50%;
-        border-radius: 8px;
-      }
-
-      header h1 {
-        font-size: 2.5rem;
-        margin-bottom: 10px;
-      }
-
-      header p {
-        font-size: 1.1rem;
-        color: rgba(255, 255, 255, 0.8);
-      }
-
-      /* ---------- ABOUT SECTION ---------- */
-
-      .about {
-        text-align: center;
-      }
-
-      .about h2 {
-        font-size: 2rem;
-        margin-bottom: 20px;
-        color: #2c3e50;
-      }
-
-      .about p {
-        max-width: 800px;
-        margin: auto;
-        color: rgba(0, 0, 0, 0.7);
-        font-size: 1rem;
-      }
-
-      .flag-row {
-        display: flex;
-        gap: 12px;
-        align-items: center;
-        background: #f8f8f8;
-        padding: 10px;
-      }
-      .flag-row svg {
-        width: 80px;
-        height: auto;
-        border: 1px solid #ddd;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        border-radius: 4px;
-      }
-
-      /* ---------- TEAM SECTION ---------- */
-      .team {
-        text-align: center;
-      }
-
-      .team h2 {
-        font-size: 2rem;
-        margin-bottom: 40px;
-        color: #2c3e50;
-      }
-
-      .team-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
-
-        max-width: 1100px;
-        margin: 0 auto;
-      }
-
-      .team-member {
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        max-width: 280px;
-        text-align: center;
-        transition: transform 0.3s ease;
-      }
-
-      .team-member:hover {
-        transform: translateY(-8px);
-      }
-
-      .team-member img {
-        width: 100%;
-        aspect-ratio: 3/4;
-        object-fit: cover;
-      }
-
-      .team-member h3 {
-        margin: 15px 0 5px;
-        color: #34495e;
-      }
-
-      .team-member p {
-        color: rgba(0, 0, 0, 0.7);
-        font-size: 0.9rem;
-        margin-bottom: 15px;
-      }
-
-      /* ---------- CONTACT SECTION ---------- */
-      .contact {
-        background: #1c1447;
-        width: 100%;
-        max-width: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      .contactinfo {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 80px 20px;
-        text-align: center;
-      }
-      .contact h2 {
-        font-size: 2rem;
-        margin-bottom: 20px;
-        color: #34b984;
-      }
-
-      .contact p {
-        color: white;
-      }
-
-      form {
-        max-width: 500px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      input,
-      textarea {
-        padding: 12px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        font-size: 1rem;
-        width: 100%;
-      }
-
-      button {
-        padding: 12px;
-        background: #3498db;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 1rem;
-        transition: background 0.3s;
-      }
-
-      button:hover {
-        background: #29b941;
-      }
-
-      /* ---------- FOOTER ---------- */
-      footer {
-        background: #0e0e2a;
-        color: white;
-        text-align: center;
-        padding: 20px;
-        font-size: 0.9rem;
-      }
-
-      /* ---------- RESPONSIVE ---------- */
-
-      /* Viewport-Stufen für Außen-Padding */
-      @media (max-width: 1200px) {
-        :root {
-          --page-x: 80px;
-        }
-      }
-
-      @media (max-width: 992px) {
-        :root {
-          --page-x: 60px;
-        }
-
-        header {
-          justify-content: center;
-          padding: 0;
-          height: auto;
-          min-height: 400px;
-        }
-
-        .header-content {
-          width: 100%;
-          padding: 30px 20px;
-          background: rgba(14, 14, 42, 0.25);
-          backdrop-filter: blur(10px);
-          -webkit-backdrop-filter: blur(10px);
-          border-radius: 0;
-          text-align: center;
-        }
-      }
-
-      @media (max-width: 768px) {
-        nav ul {
-          display: none;
-        }
-
-        nav.active ul {
-          display: flex;
-          flex-direction: column;
-          background: #34495e;
-          position: absolute;
-          top: 60px;
-          right: 0;
-          width: 100%;
-          text-align: center;
-          padding: 10px 0;
-        }
-
-        .menu-toggle {
-          display: block;
-          color: white;
-          font-size: 1.6rem;
-          cursor: pointer;
-        }
-
-        .team-member {
-          max-width: 90%;
-        }
-      }
-
-      @media (max-width: 600px) {
-        :root {
-          --page-x: 30px;
-        }
-      }
-
-      .menu-toggle {
-        display: none;
-      }
-    </style>
+    <link rel="stylesheet" href="./assets/css/Style.css" />
   </head>
   <body>
+    <!-- TODO: Move Impressum to own page, add Legal Disclaimer, change navbar accordingly -->
+
     <!-- NAVBAR -->
     <nav>
       <div class="logo"><img src="./assets/images/!404_noBG.svg" alt="404 Team Logo" width="100" height="70" /></div>
@@ -334,9 +18,17 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#team">Team</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#impressum">Impressum</a></li>
       </ul>
     </nav>
+
+    <!-- DISCLAIMER -->
+
+    <div class="disclaimer-banner" id="disclaimer-banner" role="status">
+      DISCLAIMER: This website does not belong to a real company. It is a Planspiel Web Engineering project at
+      University of Technology Chemnitz.
+      <button class="disclaimer-close" aria-label="Hide disclaimer"></button>
+    </div>
 
     <!-- HEADER -->
     <header id="home">
@@ -400,21 +92,40 @@
       </div>
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section class="contact" id="contact">
-      <div class="container">
-        <div class="contactinfo">
-          <h2>Contact Us</h2>
-          <!-- <form id="contactForm">
-      <input type="text" id="name" placeholder="Your Name" required />
-      <input type="email" id="email" placeholder="Your Email" required />
-      <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form> -->
-          <p>Please contact us by email: not404@gmail.com</p>
-        </div>
+<!-- IMPRESSUM SECTION -->
+<section class="contact impressum" id="impressum">
+  <div class="container">
+    <h2>Impressum</h2>
+    <div class="grid-2col">
+      <div class="impressum-box">
+        
+        <p class="impressum-intro">
+          This website is part of the <strong>“Planspiel Web Engineering”</strong> course at Technische Universität Chemnitz.
+          It represents a fictional company created for educational purposes only.
+        </p>
+        <div class="spacer-mid"></div>
+         <h3>Contact</h3>
+        <p>
+          E-Mail: <a href="mailto:not404@gmail.com">not404@gmail.com</a>
+        </p>
       </div>
-    </section>
+
+      <div class="impressum-box">
+        <h3>Provider according to § 5 TMG</h3>
+        <p>
+          !404 Team<br />
+          c/o Technische Universität Chemnitz<br />
+          Straße der Nationen 62<br />
+          09111 Chemnitz<br />
+          Germany
+        </p>
+       
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
     <!-- FOOTER -->
     <footer>
@@ -426,17 +137,33 @@
       // Responsive menu toggle
       const menuToggle = document.querySelector(".menu-toggle");
       const nav = document.querySelector("nav");
-      menuToggle.addEventListener("click", () => {
-        nav.classList.toggle("active");
-      });
+      if (menuToggle && nav) {
+        menuToggle.addEventListener("click", () => {
+          nav.classList.toggle("active");
+        });
+      }
 
       // Simple form handling
-      document.getElementById("contactForm").addEventListener("submit", (e) => {
-        e.preventDefault();
-        const name = document.getElementById("name").value;
-        alert(`Thank you, ${name}! Your message has been sent.`);
-        e.target.reset();
-      });
+      const contactForm = document.getElementById("contactForm");
+      if (contactForm) {
+        contactForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const name = document.getElementById("name").value;
+          alert(`Thank you, ${name}! Your message has been sent.`);
+          e.target.reset();
+        });
+      }
+
+      // Hide Disclaimer
+      const banner = document.getElementById("disclaimer-banner");
+      const closeBtn = document.querySelector(".disclaimer-close");
+
+      if (banner && closeBtn) {
+        closeBtn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          banner.style.display = "none";
+        });
+      }
     </script>
   </body>
 </html>
